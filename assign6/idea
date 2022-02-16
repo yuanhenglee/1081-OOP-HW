@@ -1,0 +1,29 @@
+world:
+  init: start generate randomly
+  mainloop: goat move birth age grass move age
+  var:
+    int numPasses,curNPass,displayInterval;
+    const int mapW = 35,mapH = 20;
+
+
+Creature:
+  init: 
+  int randomDir;
+  virtual move: if randomDir() == " " -> move
+  birth: if randomDir() == " " -> Creature
+  var:
+    char type;("X" or "I")
+    pair<int,int>position;
+    int age;
+
+Goat:
+  var:
+    int foodP;
+    const int dieAge = 70;
+    const int startBirth = 50;
+    const int endBirth = 55;
+Grass:
+  var:
+    const int dieAge = 6;
+    const int startBirth = 3;
+    const int endBirth = 5;

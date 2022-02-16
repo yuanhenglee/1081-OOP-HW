@@ -1,0 +1,85 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AnsiPrint	AnsiPrint.cc	/^AnsiPrint(const char *str, bool hi, bool blinking) {$/;"	f
+AnsiPrint	AnsiPrint.cc	/^AnsiPrint(const char *str, color fg, color bg, bool hi, bool blinking) {$/;"	f
+BASEDIR	Makefile	/^BASEDIR  = .$/;"	m
+CLASSDIR	Makefile	/^CLASSDIR = $(SYSDIR)\/class\/oop$/;"	m
+CXX	Makefile	/^CXX      = g++$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS = -std=c++11 -g -Wno-deprecated -Wall -I$(INCDIR) #-D__STDC__ $/;"	m
+Creature	World.cc	/^Creature::Creature():age(0),moved(true){}$/;"	f	class:Creature
+Creature	World.h	/^class Creature{$/;"	c
+Goat	World.cc	/^Goat::Goat(): Creature(),foodP(20){ $/;"	f	class:Goat
+Goat	World.h	/^class Goat: public Creature{$/;"	c
+Grass	World.cc	/^Grass::Grass(): Creature(){ $/;"	f	class:Grass
+Grass	World.h	/^class Grass: public Creature{$/;"	c
+HEADERS	Makefile	/^HEADERS  = ${SRCS:%.cc=%.h} $/;"	m
+INCDIR	Makefile	/^INCDIR   = $(BASEDIR)\/include #-I$(SYSDIR)\/lib\/g++-include $/;"	m
+LIB	Makefile	/^LIB      = lib$(PACKAGE)_$(HOSTTYPE).a$/;"	m
+LIBDIR	Makefile	/^LIBDIR   = -L$(BASEDIR)\/lib #-L\/usr\/openwin\/lib -L\/usr\/ucblib$/;"	m
+LIBS	Makefile	/^LIBS     = $(LIBDIR) -lm $/;"	m
+MAKEDEP	Makefile	/^MAKEDEP  = $(CLASSDIR)\/bin\/makedepend$/;"	m
+OBJS	Makefile	/^OBJS     = ${SRCS:%.cc=$(O_DIR)\/%.o}$/;"	m
+O_DIR	Makefile	/^O_DIR    = O_$(HOSTTYPE)$/;"	m
+PACKAGE	Makefile	/^PACKAGE  = ALife$/;"	m
+PrintMyID	ALifeTest.cc	/^PrintMyID(const char *studId) {$/;"	f
+PrintUsage	ALifeTest.cc	/^PrintUsage(const char *progName) {$/;"	f
+RandomNum	RandomNum.cc	/^RandomNum::RandomNum(int seed) {$/;"	f	class:RandomNum
+RandomNum	RandomNum.h	/^class RandomNum {$/;"	c
+SOURCES	Makefile	/^SOURCES  = AnsiPrint RandomNum World$/;"	m
+SRCS	Makefile	/^SRCS     = ${SOURCES:%=%.cc}$/;"	m
+SYSDIR	Makefile	/^SYSDIR   = \/usr\/local$/;"	m
+TARG	Makefile	/^TARG     = $(TARGET)_$(HOSTTYPE)$/;"	m
+TARGET	Makefile	/^TARGET   = ALifeTest$/;"	m
+TEST	Makefile	/^TEST     = ALifeTest$/;"	m
+TESTOBJ	Makefile	/^TESTOBJ  = ${TESTSRC:%.cc=$(O_DIR)\/%.o}$/;"	m
+TESTSRC	Makefile	/^TESTSRC  = ${TEST:%=%.cc}$/;"	m
+World	World.cc	/^World::World(int numPasses,int seed) : _numPasses(numPasses){$/;"	f	class:World
+World	World.h	/^class World{$/;"	c
+_ANSIPRINT_H	AnsiPrint.h	22;"	d
+_RANDOMNUM_H	RandomNum.h	22;"	d
+_creatureType	World.h	/^    char _creatureType; $/;"	m	class:Creature
+_curNPass	World.h	/^    int _numPasses,_curNPass;$/;"	m	class:World
+_numPasses	World.h	/^    int _numPasses,_curNPass;$/;"	m	class:World
+age	World.h	/^    int age;$/;"	m	class:Creature
+bgBase	AnsiPrint.cc	/^const char *bgBase="40;";$/;"	v
+birth	World.cc	/^World::birth(int target_x,int target_y){$/;"	f	class:World
+black	AnsiPrint.h	/^enum color {black=0, red, green, yellow, blue, pink, cyan, white, nochange};$/;"	e	enum:color
+blink	AnsiPrint.cc	/^const char *blink="5;";$/;"	v
+blue	AnsiPrint.h	/^enum color {black=0, red, green, yellow, blue, pink, cyan, white, nochange};$/;"	e	enum:color
+cellValid	World.cc	/^Goat::cellValid(Creature ***map,int x,int y){$/;"	f	class:Goat
+cellValid	World.cc	/^Grass::cellValid(Creature ***map,int x,int y){$/;"	f	class:Grass
+color	AnsiPrint.h	/^enum color {black=0, red, green, yellow, blue, pink, cyan, white, nochange};$/;"	g
+cyan	AnsiPrint.h	/^enum color {black=0, red, green, yellow, blue, pink, cyan, white, nochange};$/;"	e	enum:color
+dailyStatus	World.cc	/^Goat::dailyStatus(){$/;"	f	class:Goat
+dailyStatus	World.cc	/^Grass::dailyStatus(){$/;"	f	class:Grass
+endc	AnsiPrint.cc	/^const char *endc="m";$/;"	v
+fgBase	AnsiPrint.cc	/^const char *fgBase="30;";$/;"	v
+foodP	World.h	/^    int foodP;$/;"	m	class:Goat
+getRandomNum	RandomNum.cc	/^RandomNum::getRandomNum(int low, int high) const {$/;"	f	class:RandomNum
+green	AnsiPrint.h	/^enum color {black=0, red, green, yellow, blue, pink, cyan, white, nochange};$/;"	e	enum:color
+hilit	AnsiPrint.cc	/^const char *hilit="1;";$/;"	v
+init	AnsiPrint.cc	/^const char *init="\\x1b[";$/;"	v
+initGoat	World.h	/^    const int mapW = 35,mapH = 20,initGoat = 5, initGrass = 10;$/;"	m	class:World
+initGrass	World.h	/^    const int mapW = 35,mapH = 20,initGoat = 5, initGrass = 10;$/;"	m	class:World
+kFormatStrSize	AnsiPrint.cc	/^const int kFormatStrSize=20;$/;"	v
+main	ALifeTest.cc	/^main(int argc, char **argv) {$/;"	f
+mainLoop	World.cc	/^World::mainLoop(int displayInterval){$/;"	f	class:World
+map	World.h	/^    Creature ***map;$/;"	m	class:World
+mapH	World.h	/^    const int mapW = 35,mapH = 20,initGoat = 5, initGrass = 10;$/;"	m	class:World
+mapW	World.h	/^    const int mapW = 35,mapH = 20,initGoat = 5, initGrass = 10;$/;"	m	class:World
+move	World.cc	/^World::move(int &target_x,int &target_y){$/;"	f	class:World
+moved	World.h	/^    bool moved;  $/;"	m	class:Creature
+nochange	AnsiPrint.h	/^enum color {black=0, red, green, yellow, blue, pink, cyan, white, nochange};$/;"	e	enum:color
+pink	AnsiPrint.h	/^enum color {black=0, red, green, yellow, blue, pink, cyan, white, nochange};$/;"	e	enum:color
+pregnant	World.h	/^    bool pregnant(){return age>=3 && age<=5;}$/;"	f	class:Grass
+pregnant	World.h	/^    bool pregnant(){return age>=50 && age<=55;}$/;"	f	class:Goat
+printWorld	World.cc	/^World::printWorld(){$/;"	f	class:World
+rand	World.h	/^    RandomNum *rand;$/;"	m	class:World
+recover	AnsiPrint.cc	/^const char *recover="\\x1b[0m";$/;"	v
+red	AnsiPrint.h	/^enum color {black=0, red, green, yellow, blue, pink, cyan, white, nochange};$/;"	e	enum:color
+white	AnsiPrint.h	/^enum color {black=0, red, green, yellow, blue, pink, cyan, white, nochange};$/;"	e	enum:color
+yellow	AnsiPrint.h	/^enum color {black=0, red, green, yellow, blue, pink, cyan, white, nochange};$/;"	e	enum:color

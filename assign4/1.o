@@ -1,0 +1,49 @@
+
+Testing constructor
+  default constructor - Vector::Vector();
+	Vector v1 = (0, 0)
+	length = 0
+  constructor - Vector::Vector(int size);
+	Vector v2(5) = (0, 0, 0, 0, 0)
+	length = 0
+  constructor - Vector::Vector(int size, double elem[]);
+	Vector v3(3, {1.1,2.2,3.3}) = (1.1, 2.2, 3.3)
+	length = 4.11582
+  copy constructor - Vector::Vector(const Vector& v);
+ 	Vector v4 = v3, v4 = (1.1, 2.2, 3.3)
+
+Testing get/set Dimension
+  v4.getDimension() = 3
+  after v4.setDimension(7) , v4.getDimension() = 7
+	v4 = (1.1, 2.2, 3.3, 0, 0, 0, 0)
+  after v4.setDimension(2) , v4.getDimension() = 2
+	v4 = (1.1, 2.2)
+
+Testing Assignment operator
+	Vector v5(2, {6.6, 7.7}) = (6.6, 7.7)
+	Vector v6; v6 = v5; v6 = (6.6, 7.7)
+
+Testing Arithmetic operators
+  -(negate): 	-v3 = (-1.1, -2.2, -3.3)
+  +: 	 v4 + v5 = (7.7, 9.9)
+  -:  	v4 - v5 = (-5.5, -5.5)
+  *:  	v4 * 2.1 = (2.31, 4.62)	length = 5.16532
+  *:  	3.4 * v4 = (3.74, 7.48)	length = 8.36289
+  +=:  	v6 += v5; v6 = (13.2, 15.4)
+  -=:  	v5 -= v4; v5 = (5.5, 5.5)
+  *=:  	v4 *= 7.6; v4 = (8.36, 16.72)
+
+Testing Equality Operators
+  v4 = (8.36, 16.72)
+  v5 = (5.5, 5.5)
+ 	==: v4 == v5 :false
+ 	!=: v4 != v5 :true
+  after v4 = v5
+ 	==: v4 == v5 :true
+ 	!=: v4 != v5 :false
+
+General Testing
+  Vector v7; v6 *= (v6 -= (v4 + v6[0] * (v7 = -v5)))[0];
+	v6 = (6448.09, 6624.75)	length = 9244.74
+[1;5;33;41mID: 107703004[0m
+

@@ -1,0 +1,43 @@
+# Project: Assignment5
+# Makefile created by Dev-C++ 5.7.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Card.o ConsoleMenu.o SHDealer.o SHGame.o SHPlayer.o SHTest.o
+LINKOBJ  = Card.o ConsoleMenu.o SHDealer.o SHGame.o SHPlayer.o SHTest.o
+LIBS     = -L"C:/Program Files/Dev-Cpp/MinGW32/lib" -L"C:/Program Files/Dev-Cpp/MinGW32/mingw32/lib" -static-libstdc++ -static-libgcc -g3
+INCS     = -I"C:/Program Files/Dev-Cpp/MinGW32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files/Dev-Cpp/MinGW32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include" -I"C:/Program Files/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include/c++"
+BIN      = Assign5.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=c++0x
+CFLAGS   = $(INCS) -g3 -std=c++0x
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Card.o: Card.cc
+	$(CPP) -c Card.cc -o Card.o $(CXXFLAGS)
+
+ConsoleMenu.o: ConsoleMenu.cc
+	$(CPP) -c ConsoleMenu.cc -o ConsoleMenu.o $(CXXFLAGS)
+
+SHDealer.o: SHDealer.cc
+	$(CPP) -c SHDealer.cc -o SHDealer.o $(CXXFLAGS)
+
+SHGame.o: SHGame.cc
+	$(CPP) -c SHGame.cc -o SHGame.o $(CXXFLAGS)
+
+SHPlayer.o: SHPlayer.cc
+	$(CPP) -c SHPlayer.cc -o SHPlayer.o $(CXXFLAGS)
+
+SHTest.o: SHTest.cc
+	$(CPP) -c SHTest.cc -o SHTest.o $(CXXFLAGS)
